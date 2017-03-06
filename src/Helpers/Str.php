@@ -21,5 +21,4 @@ class Str
 
         return false;
     }
-    
 }
