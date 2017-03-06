@@ -31,6 +31,4 @@ class Route
         $this->handler = $handler;
         $this->params = $params;
     }
-
-
 }
