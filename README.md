@@ -37,3 +37,12 @@ if (Arr::getValue($routeInfo, 'isFound')) {
     exit('404 NOT FOUND');
 }
 ```
+
+发送请求：
+```
+// 返回 404 NOT FOUND
+$ curl http://example.com/?r=ops
+
+// 返回：Your uid: 1
+$ curl http://example.com/?=/user/1
+```
