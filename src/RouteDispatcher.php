@@ -6,9 +6,6 @@ use Zqhong\Route\Helpers\Arr;
 
 class RouteDispatcher
 {
-    const FOUND = 0;
-    const NOT_FOUND = 1;
-
     /**
      * @var RouteCollector
      */
@@ -30,10 +27,16 @@ class RouteDispatcher
      */
     public function dispatch($httpMethod, $uri)
     {
+        $return = [
+            'isFound' => false,
+            'handler' => '',
+            'params' => [],
+        ];
         $staticRoutes = $this->routeCollector->getStaticRoutes();
 
         if (isset($staticRoutes[$httpMethod][$uri])) {
-            return [self::FOUND, $staticRoutes[$httpMethod][$uri]];
+            $return['isFound'] = true;
+            $return['handler'] = $staticRoutes[$httpMethod][$uri];
         } else {
             $combinedVarRoutes = $this->routeCollector->getCombinedVarRoutes($httpMethod);
             if (!empty($combinedVarRoutes)) {
@@ -50,11 +53,13 @@ class RouteDispatcher
                         $params[$k] = $matches[--$cnt];
                     }
 
-                    return [self::FOUND, $handler, $params];
+                    $return['isFound'] = true;
+                    $return['handler'] = $handler;
+                    $return['params'] = $params;
                 }
             }
         }
 
-        return [self::NOT_FOUND];
+        return $return;
     }
 }

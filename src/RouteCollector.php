@@ -31,10 +31,7 @@ class RouteCollector
      * [
      *      'GET' => [
      *          '/user/(\d+) => [
-     *              'params' => [
-     *                  'id' => 'id',
-     *              ],
-     *              'handler' => 'handler0',
+     *              new Route('/user/(\d+)', 'handler', ['id' => 'id']),
      *          ]
      *      ]
      * ]
