@@ -1,9 +1,9 @@
 <?php
 
-use Zqhong\Route\RouteCollector;
-use Zqhong\Route\RouteDispatcher;
-use Zqhong\Route\RouteGenerator;
-use Zqhong\Route\RouteParser;
+use zqhong\route\RouteCollector;
+use zqhong\route\RouteDispatcher;
+use zqhong\route\RouteGenerator;
+use zqhong\route\RouteParser;
 
 if (!function_exists('dispatcher')) {
     function dispatcher(callable $callback, array $options = [])

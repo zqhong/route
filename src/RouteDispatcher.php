@@ -1,8 +1,8 @@
 <?php
 
-namespace Zqhong\Route;
+namespace zqhong\route;
 
-use Zqhong\Route\Helpers\Arr;
+use zqhong\route\Helpers\Arr;
 
 class RouteDispatcher
 {

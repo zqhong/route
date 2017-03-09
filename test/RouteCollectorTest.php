@@ -1,13 +1,13 @@
 <?php
 
-namespace Zqhong\Route\Test;
+namespace zqhong\route\Test;
 
 use Mockery as m;
 use PHPUnit\Framework\TestCase;
-use Zqhong\Route\Route;
-use Zqhong\Route\RouteCollector;
-use Zqhong\Route\RouteGenerator;
-use Zqhong\Route\RouteParser;
+use zqhong\route\Route;
+use zqhong\route\RouteCollector;
+use zqhong\route\RouteGenerator;
+use zqhong\route\RouteParser;
 
 class RouteCollectorTest extends TestCase
 {

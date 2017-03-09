@@ -1,9 +1,9 @@
 <?php
 
-namespace Zqhong\Route\Test\Helper;
+namespace zqhong\route\Test\Helper;
 
 use PHPUnit\Framework\TestCase;
-use Zqhong\Route\Helpers\Str;
+use zqhong\route\Helpers\Str;
 
 class StrTest extends TestCase
 {

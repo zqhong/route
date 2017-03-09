@@ -1,10 +1,10 @@
 <?php
 
-namespace Zqhong\Route\Test;
+namespace zqhong\route\Test;
 
 use PHPUnit\Framework\TestCase;
-use Zqhong\Route\Route;
-use Zqhong\Route\RouteParser;
+use zqhong\route\Route;
+use zqhong\route\RouteParser;
 
 class RouteParserTest extends TestCase
 {

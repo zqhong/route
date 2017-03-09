@@ -1,6 +1,6 @@
 <?php
 
-namespace Zqhong\Route;
+namespace zqhong\route;
 
 class RouteParser
 {

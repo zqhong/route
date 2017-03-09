@@ -1,6 +1,6 @@
 <?php
 
-namespace Zqhong\Route\Helpers;
+namespace zqhong\route\Helpers;
 
 class Arr
 {
