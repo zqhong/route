@@ -1,0 +1,56 @@
+root@8f2f25752863:/var/www# ab -n 2000 -c 10 http://localhost/zqhong_route.php
+This is ApacheBench, Version 2.3 <$Revision: 1706008 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+Completed 200 requests
+Completed 400 requests
+Completed 600 requests
+Completed 800 requests
+Completed 1000 requests
+Completed 1200 requests
+Completed 1400 requests
+Completed 1600 requests
+Completed 1800 requests
+Completed 2000 requests
+Finished 2000 requests
+
+
+Server Software:        Apache/2.4.18
+Server Hostname:        localhost
+Server Port:            80
+
+Document Path:          /zqhong_route.php
+Document Length:        115 bytes
+
+Concurrency Level:      10
+Time taken for tests:   0.338 seconds
+Complete requests:      2000
+Failed requests:        0
+Total transferred:      612000 bytes
+HTML transferred:       230000 bytes
+Requests per second:    5923.56 [#/sec] (mean)
+Time per request:       1.688 [ms] (mean)
+Time per request:       0.169 [ms] (mean, across all concurrent requests)
+Transfer rate:          1770.13 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.3      0      10
+Processing:     0    1   0.8      1      12
+Waiting:        0    1   0.7      1      11
+Total:          1    2   0.8      1      12
+WARNING: The median and mean for the total time are not within a normal deviation
+        These results are probably not that reliable.
+
+Percentage of the requests served within a certain time (ms)
+  50%      1
+  66%      2
+  75%      2
+  80%      2
+  90%      2
+  95%      2
+  98%      3
+  99%      5
+ 100%     12 (longest request)

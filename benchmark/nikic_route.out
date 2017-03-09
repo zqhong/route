@@ -1,0 +1,54 @@
+root@8f2f25752863:/var/www# ab -n 2000 -c 10 http://localhost/nikic_route.php
+This is ApacheBench, Version 2.3 <$Revision: 1706008 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+Completed 200 requests
+Completed 400 requests
+Completed 600 requests
+Completed 800 requests
+Completed 1000 requests
+Completed 1200 requests
+Completed 1400 requests
+Completed 1600 requests
+Completed 1800 requests
+Completed 2000 requests
+Finished 2000 requests
+
+
+Server Software:        Apache/2.4.18
+Server Hostname:        localhost
+Server Port:            80
+
+Document Path:          /nikic_route.php
+Document Length:        98 bytes
+
+Concurrency Level:      10
+Time taken for tests:   0.567 seconds
+Complete requests:      2000
+Failed requests:        0
+Total transferred:      576000 bytes
+HTML transferred:       196000 bytes
+Requests per second:    3527.98 [#/sec] (mean)
+Time per request:       2.834 [ms] (mean)
+Time per request:       0.283 [ms] (mean, across all concurrent requests)
+Transfer rate:          992.25 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.2      0       2
+Processing:     1    3   1.5      2      23
+Waiting:        1    2   1.5      2      22
+Total:          1    3   1.5      3      23
+
+Percentage of the requests served within a certain time (ms)
+  50%      3
+  66%      3
+  75%      3
+  80%      3
+  90%      3
+  95%      4
+  98%      4
+  99%      4
+ 100%     23 (longest request)
