@@ -25,5 +25,5 @@ if (Arr::getValue($routeInfo, 'isFound')) {
     $params = Arr::getValue($routeInfo, 'params');
     call_user_func_array($handler, $params);
 } else {
-    exit('404 NOT FOUND');
+    echo '404 NOT FOUND';
 }
