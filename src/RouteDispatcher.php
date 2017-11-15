@@ -49,8 +49,9 @@ class RouteDispatcher
                     $handler = $routeMap[$cnt]['handler'];
                     $params = $routeMap[$cnt]['params'];
 
+                    $i = 0;
                     foreach ($params as $k => $v) {
-                        $params[$k] = $matches[--$cnt];
+                        $params[$k] = $matches[++$i];
                     }
 
                     $return['isFound'] = true;
