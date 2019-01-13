@@ -24,7 +24,7 @@ class RouteGenerator
             $numVariables = count($route->params);
             $numGroups = max($numGroups, $numVariables);
 
-            $regexes[] = $route->route . str_repeat('()', $numGroups - $numVariables);
+            $regexes[] = str_replace('()', '', $route->route . str_repeat('()', $numGroups - $numVariables));
             $routeMap[$numGroups + 1] = [
                 'handler' => $route->handler,
                 'params' => $route->params,
